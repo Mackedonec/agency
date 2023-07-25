@@ -1,16 +1,13 @@
 ///fonts///
-$font-primary: "Inter", sans-serif;
-$font-secondary: "Roboto", sans-serif;
-$font-title: "CircularStd", sans-serif;
+$font-primary: "Quicksand", sans-serif;
+$font-secondary: "Nunito", sans-serif;
 $font-size: 16px;
 
 ///colors///
-$primary-color: #0555ff;
-$secondary-color: #050038;
-$white-color: #ffffff;
-$gray-color-light: #ffffff80;
-$gray-color: #5b5e6d;
-$footer-spec-color: #7884a6;
+$primary-color: #0e0e0e;
+$secondary-color: #0b0f15;
+$title-color: #e2e2e2;
+$footer-spec-color: #383638;
 
 ///mixins///
 @mixin abs-position($top: 0, $right: 0, $bottom: 0, $left: 0) {

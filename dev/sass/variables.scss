@@ -40,8 +40,8 @@ $footer-spec-color: #383638;
   transition: 1s;
 }
 
-@mixin xxl-plus {
-  @media screen and (max-width: 1499px) {
+@mixin random1 {
+  @media screen and (max-width: 380px) {
     @content;
   }
 }

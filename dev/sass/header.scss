@@ -23,6 +23,10 @@ header {
           @include t05s;
           transform: translatey(-5px);
         }
+        @include sm {
+          font-size: 14px;
+          letter-spacing: 0.12px;
+        }
       }
     }
     .btn-dark {
@@ -34,6 +38,18 @@ header {
         background-color: $title-color;
         color: $primary-color;
         border: 1px solid $title-color;
+      }
+      @include lg {
+        margin-top: 20px;
+      }
+      @include sm {
+        margin-top: 10px;
+        width: 146px;
+        height: 38px;
+        padding: 10px 35px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.12px;
       }
     }
     .navbar-toggler {
@@ -100,20 +116,55 @@ header {
     max-width: 800px;
     text-align: center;
     margin-top: 68px;
+    @include lg {
+      max-width: 600px;
+    }
+    @include md {
+      max-width: 480px;
+    }
+    @include sm {
+      max-width: 360px;
+    }
     .header-title {
       font-size: 64px;
       font-weight: 800;
       letter-spacing: 0.64px;
       margin-bottom: 24px;
+      @include lg {
+        font-size: 48px;
+        letter-spacing: 0.48px;
+      }
+      @include md {
+        font-size: 36px;
+        letter-spacing: 0.36px;
+      }
+      @include sm {
+        font-size: 28px;
+        letter-spacing: 0.28px;
+      }
     }
     .heaser-descript {
       font-size: 20px;
       letter-spacing: 0.2px;
       opacity: 0.6;
       margin-bottom: 32px;
+      @include lg {
+        font-size: 18px;
+        letter-spacing: 0.18px;
+      }
+      @include md {
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
+      @include sm {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+      }
     }
     .btn-white {
       z-index: 1;
+      line-height: 24px;
+      letter-spacing: 0.16px;
       @include t05s;
       &:active,
       &:hover {
@@ -121,6 +172,14 @@ header {
         background-color: $primary-color;
         color: $title-color;
         border: 1px solid $title-color;
+      }
+      @include sm {
+        width: 146px;
+        height: 38px;
+        padding: 10px 35px;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.12px;
       }
     }
   }
@@ -150,6 +209,15 @@ header {
           transform: scale(1);
         }
       }
+      @include md {
+        left: 0;
+      }
+      @include sm {
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
     .red-ball {
       overflow: hidden;
@@ -162,6 +230,14 @@ header {
         position: absolute;
         top: -17px;
         right: -34px;
+      }
+      @include sm {
+        img {
+          top: 5px;
+          right: -15px;
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }

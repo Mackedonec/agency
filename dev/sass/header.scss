@@ -1,6 +1,4 @@
 header {
-  width: 100%;
-  max-width: 100vw;
   .navbar {
     margin: 72px auto 0;
     max-width: 1250px;
@@ -31,14 +29,6 @@ header {
     }
     .btn-dark {
       margin: 0;
-      @include t05s;
-      &:active,
-      &:hover {
-        @include t05s;
-        background-color: $title-color;
-        color: $primary-color;
-        border: 1px solid $title-color;
-      }
       @include lg {
         margin-top: 20px;
       }
@@ -56,8 +46,8 @@ header {
       position: relative;
       text-align: center;
       border: none;
-      width: 27.5px;
-      height: 25px;
+      width: 47.5px;
+      height: 45px;
       padding: 0;
       &-icon {
         background-image: none;
@@ -65,8 +55,8 @@ header {
         background-color: $title-color;
         height: 2.5px;
         width: 20.5px;
-        left: 0;
-        top: 11px;
+        left: 12px;
+        top: 22px;
         transition: 0.4s;
         &::before,
         &::after {
@@ -165,14 +155,7 @@ header {
       z-index: 1;
       line-height: 24px;
       letter-spacing: 0.16px;
-      @include t05s;
-      &:active,
-      &:hover {
-        @include t05s;
-        background-color: $primary-color;
-        color: $title-color;
-        border: 1px solid $title-color;
-      }
+
       @include sm {
         width: 146px;
         height: 38px;
@@ -196,19 +179,6 @@ header {
       animation-name: ball;
       animation-duration: 4.5s;
       animation-iteration-count: infinite;
-      @keyframes ball {
-        0% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.2);
-        }
-
-        100% {
-          transform: scale(1);
-        }
-      }
       @include md {
         left: 0;
       }

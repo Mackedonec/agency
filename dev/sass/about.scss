@@ -1,0 +1,80 @@
+.about {
+  margin: 0 auto 100px;
+  .container {
+    @include xxl {
+      max-width: 1190px;
+    }
+    .wrapper-title {
+      text-align: center;
+      margin-bottom: 40px;
+      .about-subtitle {
+        font-family: $font-primary;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: 0.24px;
+      }
+      .about-title {
+        margin-top: 20px;
+        font-size: 55px;
+        font-weight: 700;
+        letter-spacing: 0.165px;
+      }
+    }
+    .imges-box {
+      position: relative;
+      width: 600px;
+      margin: 30px auto;
+      .img-box {
+        position: relative;
+        overflow: hidden;
+        max-width: 565px;
+        margin: 0 auto;
+        border-radius: 24px;
+        img {
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          animation-name: img;
+          animation-duration: 24.5s;
+          animation-iteration-count: infinite;
+        }
+      }
+      .balls-group {
+        overflow: visible;
+        position: absolute;
+        top: -11px;
+        left: -11px;
+        ellipse {
+          fill: #ff6e1a;
+        }
+      }
+      .balls-group2 {
+        overflow: visible;
+        position: absolute;
+        bottom: -11px;
+        right: -11px;
+      }
+    }
+    .descript-box {
+      max-width: 600px;
+      margin: 50px auto;
+      @include xxl {
+        padding-left: 15px;
+      }
+      .about-descript {
+        font-family: $font-primary;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+      }
+    }
+    .button-group {
+      position: relative;
+      z-index: 1;
+      margin-top: 30px;
+      .btn-white {
+        margin-right: 25px;
+      }
+    }
+  }
+}

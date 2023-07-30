@@ -1,6 +1,6 @@
 .screen {
   text-align: center;
-  margin: 100px auto 50px;
+  margin: 100px auto 150px;
   .container {
     @include sm {
       max-width: 540px;
@@ -15,7 +15,6 @@
       .imges-box {
         position: relative;
         .img-box {
-          position: relative;
           overflow: hidden;
           max-width: 739px;
           margin: 0 auto;
@@ -32,50 +31,20 @@
             animation-name: img;
             animation-duration: 24.5s;
             animation-iteration-count: infinite;
-            @keyframes img {
-              0% {
-                transform: scale(1) rotate(0);
-              }
-              50% {
-                transform: scale(1.1) rotate(5deg);
-              }
-              100% {
-                transform: scale(1) rotate(0);
-              }
-            }
           }
         }
         .balls-group {
-          overflow: visible;
           position: absolute;
           top: -10px;
           left: 75px;
           animation-name: balls;
           animation-duration: 24.5s;
           animation-iteration-count: infinite;
-          @keyframes balls {
-            0% {
-              transform: translateX(0);
-            }
-            50% {
-              transform: translateX(550px);
-            }
-            100% {
-              transform: translateX(0);
-            }
-          }
+
           @include lg {
-            @keyframes balls {
-              0% {
-                transform: translateX(0);
-              }
-              50% {
-                transform: translateX(480px);
-              }
-              100% {
-                transform: translateX(0);
-              }
-            }
+            animation-name: ballslg;
+            animation-duration: 24.5s;
+            animation-iteration-count: infinite;
           }
           @include md {
             top: 165px;
@@ -90,36 +59,17 @@
           }
         }
         .balls-group2 {
-          overflow: visible;
           position: absolute;
           bottom: -10px;
           right: 75px;
           animation-name: balls2;
           animation-duration: 24.5s;
           animation-iteration-count: infinite;
-          @keyframes balls2 {
-            0% {
-              transform: translateX(0);
-            }
-            50% {
-              transform: translateX(-550px);
-            }
-            100% {
-              transform: translateX(0);
-            }
-          }
+
           @include lg {
-            @keyframes balls2 {
-              0% {
-                transform: translateX(0);
-              }
-              50% {
-                transform: translateX(-480px);
-              }
-              100% {
-                transform: translateX(0);
-              }
-            }
+            animation-name: balls2lg;
+            animation-duration: 24.5s;
+            animation-iteration-count: infinite;
           }
           @include md {
             animation: none;
@@ -144,7 +94,6 @@
         height: 95px;
         border-radius: 16px;
         background: #0d0d0d;
-        box-shadow: 0px 8px 24px 0px #00000026;
         top: 30px;
         left: -60px;
         text-transform: uppercase;
@@ -152,6 +101,7 @@
         &:hover {
           @include t05s;
           transform: scale(1.1);
+          background-color: $secondary-color;
         }
         &::before {
           content: "";
@@ -208,7 +158,6 @@
         position: absolute;
         border-radius: 16px;
         background: #0d0d0d;
-        box-shadow: 0px 8px 24px 0px #00000026;
         width: 166px;
         height: 166px;
         bottom: 30px;
@@ -226,6 +175,7 @@
         &:hover {
           @include t05s;
           transform: scale(1.1);
+          background-color: $secondary-color;
         }
         .down-img {
           display: flex;

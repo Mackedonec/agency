@@ -33,6 +33,14 @@ a {
   padding: 12px 50px;
   border-radius: 24px;
   letter-spacing: 0.16px;
+  @include t05s;
+  &:active,
+  &:hover {
+    @include t05s;
+    background-color: $title-color;
+    color: $primary-color;
+    border: 1px solid $title-color;
+  }
 }
 
 .btn-white {
@@ -42,4 +50,12 @@ a {
   padding: 12px 50px;
   border-radius: 24px;
   letter-spacing: 0.16px;
+  @include t05s;
+  &:active,
+  &:hover {
+    @include t05s;
+    background-color: $primary-color;
+    color: $title-color;
+    border: 1px solid $title-color;
+  }
 }

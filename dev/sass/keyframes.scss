@@ -1,4 +1,4 @@
-@keyframes balls {
+@keyframes ballsmove {
   0% {
     transform: translateX(0);
   }
@@ -9,7 +9,7 @@
     transform: translateX(0);
   }
 }
-@keyframes balls2 {
+@keyframes ballsmove2 {
   0% {
     transform: translateX(0);
   }
@@ -20,7 +20,7 @@
     transform: translateX(0);
   }
 }
-@keyframes ballslg {
+@keyframes ballsmovelg {
   0% {
     transform: translateX(0);
   }
@@ -31,7 +31,7 @@
     transform: translateX(0);
   }
 }
-@keyframes balls2lg {
+@keyframes ballsmove2lg {
   0% {
     transform: translateX(0);
   }
@@ -61,6 +61,54 @@
   }
   50% {
     transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes fill1 {
+  0% {
+    fill: #ff6e1a;
+  }
+  50% {
+    fill: #ec1aff;
+    rx: 5;
+    ry: 5;
+  }
+  100% {
+    fill: #ff6e1a;
+  }
+}
+@keyframes fill2 {
+  0% {
+    fill: #ec1aff;
+  }
+  50% {
+    fill: #ff6e1a;
+    rx: 5;
+    ry: 5;
+  }
+  100% {
+    fill: #ec1aff;
+  }
+}
+@keyframes ballsrotate {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(25deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+@keyframes ballsrotate2 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(25deg);
   }
   100% {
     transform: scale(1) rotate(0);

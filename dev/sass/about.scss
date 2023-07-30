@@ -12,24 +12,55 @@
         font-weight: 600;
         line-height: 1;
         letter-spacing: 0.24px;
+        @include lg {
+          font-size: 18px;
+          letter-spacing: 0.18px;
+        }
+        @include md {
+          font-size: 16px;
+          letter-spacing: 0.16px;
+        }
+        @include sm {
+          font-size: 14px;
+          letter-spacing: 0.14px;
+        }
       }
       .about-title {
         margin-top: 20px;
         font-size: 55px;
         font-weight: 700;
         letter-spacing: 0.165px;
+        @include lg {
+          font-size: 48px;
+          letter-spacing: 0.48px;
+        }
+        @include md {
+          font-size: 36px;
+          letter-spacing: 0.36px;
+        }
+        @include sm {
+          font-size: 24px;
+          letter-spacing: 0.28px;
+        }
       }
     }
     .imges-box {
       position: relative;
-      width: 600px;
+      max-width: 600px;
       margin: 30px auto;
+      @include md {
+        max-width: 340px;
+      }
       .img-box {
         position: relative;
         overflow: hidden;
         max-width: 565px;
         margin: 0 auto;
         border-radius: 24px;
+        @include md {
+          border-radius: 12px;
+          max-width: 340px;
+        }
         img {
           position: relative;
           z-index: 1;
@@ -44,8 +75,25 @@
         position: absolute;
         top: -11px;
         left: -11px;
+        animation-name: ballsrotate;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include md {
+          animation: none;
+          left: 10px;
+        }
+        @include random1 {
+          display: none;
+        }
         ellipse {
+          animation-name: fill1;
+          animation-duration: 24.5s;
+          animation-iteration-count: infinite;
           fill: #ff6e1a;
+          @include md {
+            animation: none;
+            fill: #ec1aff;
+          }
         }
       }
       .balls-group2 {
@@ -53,6 +101,20 @@
         position: absolute;
         bottom: -11px;
         right: -11px;
+        animation-name: ballsrotate2;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include md {
+          display: none;
+        }
+        ellipse {
+          animation-name: fill2;
+          animation-duration: 24.5s;
+          animation-iteration-count: infinite;
+          @include md {
+            animation: none;
+          }
+        }
       }
     }
     .descript-box {
@@ -61,19 +123,79 @@
       @include xxl {
         padding-left: 15px;
       }
+      @include sm {
+        margin-top: 10px;
+      }
       .about-descript {
         font-family: $font-primary;
         font-size: 20px;
         line-height: 1.6;
         letter-spacing: 0.2px;
+        @include sm {
+          font-size: 14px;
+          letter-spacing: 0.14px;
+        }
       }
     }
     .button-group {
       position: relative;
       z-index: 1;
+
       margin-top: 30px;
+      @include xl {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
       .btn-white {
-        margin-right: 25px;
+        margin-right: 12.5px;
+        @include sm {
+          margin: 5px;
+          padding: 10px 35px;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.12px;
+        }
+      }
+      .btn-dark {
+        position: relative;
+        margin-left: 12.5px;
+        width: 210px;
+        padding: 12px 50px 12px 84px;
+        &::before {
+          @include t05s;
+          content: "";
+          position: absolute;
+          left: 46px;
+          top: 12px;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-image: url(assets/img/play.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+        &:hover {
+          &::before {
+            @include t05s;
+            background-color: $primary-color;
+          }
+        }
+        @include sm {
+          margin: 5px;
+          width: 150px;
+          padding: 10px 35px 10px 61px;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.12px;
+          &::before {
+            left: 34px;
+            top: 11px;
+            width: 16px;
+            height: 16px;
+          }
+        }
       }
     }
   }

@@ -6,6 +6,8 @@ header {
     .navbar-nav {
       margin: 0 auto;
       .nav-link {
+        width: 120px;
+        margin: 0 auto;
         padding-left: 25px;
         padding-right: 25px;
         font-family: $font-primary;
@@ -14,12 +16,12 @@ header {
         color: $title-color;
         letter-spacing: 0.18px;
         @include t05s;
-        &.active {
-          font-weight: 700;
-        }
         &:hover {
           @include t05s;
           transform: translatey(-5px);
+        }
+        &.active {
+          font-weight: 700;
         }
         @include sm {
           font-size: 14px;
@@ -31,6 +33,7 @@ header {
       margin: 0;
       @include lg {
         margin-top: 20px;
+        margin-left: 10px;
       }
       @include sm {
         margin-top: 10px;

@@ -31,6 +31,11 @@ span {
   @include visually-hidden;
 }
 
+.container,
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .btn-dark {
   background-color: $primary-color;
   color: $title-color;

@@ -66,6 +66,18 @@
     transform: scale(1) rotate(0);
   }
 }
+@keyframes imgrevers {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  50% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
 @keyframes fill1 {
   0% {
     fill: #ff6e1a;

@@ -4,6 +4,8 @@
     position: relative;
     max-width: 525px;
     margin: 0 auto 27px;
+    padding-left: 10px;
+    padding-right: 10px;
     .services-subtitle {
       font-size: 24px;
       font-weight: 600;
@@ -56,6 +58,10 @@
       letter-spacing: 0.2px;
       @include xl {
         text-align: center;
+      }
+      @include md {
+        font-size: 16px;
+        letter-spacing: 0.16px;
       }
       @include sm {
         font-size: 14px;
@@ -119,16 +125,18 @@
   .row {
     &.wrapper {
       max-width: 600px;
-
       .col-md-6 {
         padding: 20px;
+        @include sm {
+          padding: 10px 0;
+        }
       }
       .services-box {
         margin: 0 auto;
         background-color: $primary-color;
         border-radius: 30px;
         border: 1px solid #ffffff1a;
-        width: 262px;
+        max-width: 262px;
         height: 269px;
         display: flex;
         align-items: center;
@@ -138,21 +146,28 @@
         &:hover {
           @include t05s;
           background-color: $secondary-color;
+          .services-name {
+            @include t05s;
+            transform: scale(1.1);
+          }
+          .img-box {
+            @include t05s;
+            transform: scale(1.1);
+          }
         }
-
         .services-name {
           text-align: center;
           font-size: 24px;
           font-weight: 700;
           line-height: 1.41;
           letter-spacing: 0.24px;
+          @include t05s;
           @include sm {
             width: 112px;
             font-size: 16px;
             letter-spacing: 0.16px;
           }
         }
-
         .img-box {
           width: 100px;
           height: 100px;
@@ -161,7 +176,7 @@
           align-items: center;
           border-radius: 50%;
           margin-bottom: 22px;
-
+          @include t05s;
           &.img-1 {
             background-color: #e2e2e2;
           }

@@ -64,7 +64,7 @@
           position: relative;
           z-index: 1;
           overflow: hidden;
-          animation-name: img;
+          animation-name: imgrevers;
           animation-duration: 24.5s;
           animation-iteration-count: infinite;
         }
@@ -119,9 +119,8 @@
     .descript-box {
       max-width: 600px;
       margin: 50px auto;
-      @include xxl {
-        padding-left: 15px;
-      }
+      padding-left: 10px;
+      padding-right: 10px;
       @include sm {
         margin-top: 10px;
       }

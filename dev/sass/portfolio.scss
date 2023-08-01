@@ -1,0 +1,194 @@
+.portfolio {
+  margin: 0 auto 150px;
+  .btn-dark {
+    margin-top: 34px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    @include sm {
+      padding: 10px 35px;
+    }
+  }
+  .wrapper-text {
+    max-width: 675px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    .portfolio-subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.24px;
+      @include lg {
+        font-size: 18px;
+        letter-spacing: 0.18px;
+      }
+      @include md {
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
+      @include sm {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+      }
+    }
+    .portfolio-title {
+      margin: 28px auto 20px;
+      font-size: 55px;
+      font-weight: 700;
+      letter-spacing: 0.165px;
+      @include lg {
+        font-size: 48px;
+        letter-spacing: 0.48px;
+      }
+      @include md {
+        font-size: 36px;
+        letter-spacing: 0.36px;
+      }
+      @include sm {
+        font-size: 24px;
+        letter-spacing: 0.28px;
+      }
+    }
+    .portfolio-descript {
+      margin-bottom: 50px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.7;
+      letter-spacing: 0.2px;
+      @include md {
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
+      @include sm {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+      }
+    }
+    .balls-group {
+      overflow: visible;
+      position: absolute;
+      top: 124px;
+      right: -290px;
+      transform: rotate(-15deg);
+      @include xxl {
+        right: -200px;
+      }
+      @include xl {
+        right: -100px;
+      }
+      @include lg {
+        display: none;
+      }
+      ellipse {
+        animation-name: fill2;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include lg {
+          animation: none;
+        }
+      }
+    }
+    .balls-group2 {
+      overflow: visible;
+      position: absolute;
+      bottom: -203px;
+      left: 103px;
+      transform: rotate(15deg);
+      @include lg {
+        display: none;
+      }
+      ellipse {
+        animation-name: fill2;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include lg {
+          animation: none;
+        }
+      }
+    }
+  }
+  .wrapper-img {
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    .row {
+      align-items: center;
+    }
+    .img-box {
+      position: relative;
+      z-index: 1;
+      border-radius: 30px;
+      overflow: hidden;
+      margin: 20px auto;
+      max-width: 350px;
+      display: flex;
+      justify-content: center;
+      @include sm {
+        max-width: 300px;
+      }
+      .img-1 {
+        width: 350px;
+        height: 350px;
+        background-image: url(assets/img/portfolio-img1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-name: imgrevers;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include sm {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      .img-3 {
+        width: 350px;
+        height: 350px;
+        background-image: url(assets/img/portfolio-img3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-name: imgrevers;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include sm {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      &.big {
+        max-width: 400px;
+        @include sm {
+          max-width: 340px;
+        }
+        .img-2 {
+          width: 400px;
+          height: 400px;
+          background-image: url(assets/img/portfolio-img2.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          animation-name: img;
+          animation-duration: 24.5s;
+          animation-iteration-count: infinite;
+          @include sm {
+            width: 340px;
+            height: 340px;
+          }
+        }
+      }
+      .img-descript {
+        position: absolute;
+        z-index: 2;
+        bottom: 50px;
+        left: 24px;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 0px;
+        letter-spacing: 0.072px;
+        text-shadow: 1px 1px 1px #000;
+      }
+    }
+  }
+}

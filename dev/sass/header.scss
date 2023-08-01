@@ -17,6 +17,7 @@ header {
         letter-spacing: 0.18px;
         @include t05s;
         &:hover {
+          text-shadow: 3px 3px 3px $title-color;
           @include t05s;
           transform: translatey(-5px);
         }

@@ -15,11 +15,16 @@ h4,
 h5,
 .h5,
 h6,
-.h6,
-p,
-a {
+.h6 {
   color: $title-color;
   font-family: $font-secondary;
+}
+
+a,
+p,
+span {
+  color: $title-color;
+  font-family: $font-primary;
 }
 
 .for-validator {

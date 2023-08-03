@@ -104,6 +104,19 @@
     fill: #ec1aff;
   }
 }
+@keyframes fill3 {
+  0% {
+    fill: #2563ff;
+  }
+  50% {
+    fill: #ff6e1a;
+    rx: 5;
+    ry: 5;
+  }
+  100% {
+    fill: #2563ff;
+  }
+}
 @keyframes ballsrotate {
   0% {
     transform: scale(1) rotate(0);

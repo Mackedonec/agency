@@ -15,10 +15,7 @@
     text-align: center;
     position: relative;
     .portfolio-subtitle {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: 0.24px;
+      @extend .subtitle;
       @include lg {
         font-size: 18px;
         letter-spacing: 0.18px;
@@ -33,10 +30,8 @@
       }
     }
     .portfolio-title {
+      @extend .title;
       margin: 28px auto 20px;
-      font-size: 55px;
-      font-weight: 700;
-      letter-spacing: 0.165px;
       @include lg {
         font-size: 48px;
         letter-spacing: 0.48px;
@@ -51,11 +46,8 @@
       }
     }
     .portfolio-descript {
+      @extend .descript;
       margin-bottom: 50px;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.7;
-      letter-spacing: 0.2px;
       @include md {
         font-size: 16px;
         letter-spacing: 0.16px;
@@ -78,13 +70,17 @@
         right: -100px;
       }
       @include lg {
+        right: -10px;
+        top: 225px;
+      }
+      @include md {
         display: none;
       }
       ellipse {
         animation-name: fill2;
         animation-duration: 24.5s;
         animation-iteration-count: infinite;
-        @include lg {
+        @include md {
           animation: none;
         }
       }
@@ -95,14 +91,14 @@
       bottom: -203px;
       left: 103px;
       transform: rotate(15deg);
-      @include lg {
+      @include md {
         display: none;
       }
       ellipse {
         animation-name: fill2;
         animation-duration: 24.5s;
         animation-iteration-count: infinite;
-        @include lg {
+        @include md {
           animation: none;
         }
       }

@@ -7,10 +7,7 @@
     padding-left: 10px;
     padding-right: 10px;
     .services-subtitle {
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: 0.24px;
+      @extend .subtitle;
       @include xl {
         text-align: center;
       }
@@ -28,12 +25,10 @@
       }
     }
     .services-title {
+      @extend .title;
       margin-top: 32px;
       margin-bottom: 18px;
-      font-size: 55px;
-      font-weight: 700;
       line-height: 1.3;
-      letter-spacing: 0.165px;
       @include xl {
         text-align: center;
       }
@@ -51,11 +46,8 @@
       }
     }
     .services-descript {
+      @extend .descript;
       margin-bottom: 36px;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 1.6;
-      letter-spacing: 0.2px;
       @include xl {
         text-align: center;
       }
@@ -180,15 +172,12 @@
           &.img-1 {
             background-color: #e2e2e2;
           }
-
           &.img-2 {
             background-color: #ff4646;
           }
-
           &.img-3 {
             background-color: #8eea77;
           }
-
           &.img-4 {
             background-color: #ffb21a;
           }

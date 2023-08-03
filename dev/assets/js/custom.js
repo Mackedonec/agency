@@ -1,11 +1,54 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navLinks = document.querySelectorAll(".nav-link");
+$(document).ready(function () {
+  let $navbar = $("#header-navbar");
+  let $btnBack2Top = $("#back2top");
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function () {
-      navLinks.forEach((navLink) => navLink.classList.remove("active"));
+  /* кнопка возврата в начало страницы */
+  const back2TopOffset = 700;
+  const back2TopAnimationDuration = 200;
+  const back2TopAnimationFunction = "swing";
+  const back2Top = (pos) =>
+    pos >= back2TopOffset
+      ? $btnBack2Top.fadeIn(500)
+      : $btnBack2Top.fadeOut(500);
 
-      this.classList.add("active");
-    });
+  $btnBack2Top.on("click", () => {
+    $("html").animate(
+      {
+        scrollTop: 0,
+      },
+      back2TopAnimationDuration,
+      back2TopAnimationFunction
+    );
+    return false;
   });
+  /* кнопка возврата в начало страницы */
+
+  /* добавление класса-модификатора в меню на скрол */
+  const headerClassOnScroll = "header-navbar--scrolled";
+  const headerScrollTrigger = 100;
+
+  $(window).on("scroll", () => {
+    $(window).scrollTop() > headerScrollTrigger
+      ? $navbar.addClass(headerClassOnScroll)
+      : $navbar.removeClass(headerClassOnScroll);
+    back2Top($(window).scrollTop());
+  });
+  /* добавление класса-модификатора в меню на скрол */
+
+  /* подключение и настройка внутристраничной навигации */
+  $navbar.onePageNav({
+    currentClass: "active",
+    scrollSpeed: 0,
+    easing: "swing",
+    filter: ":not(.navbar-brand)",
+  });
+  /* подключение и настройка внутристраничной навигации */
+
+  /* подключение и настрока плагина анимации */
+  AOS.init({
+    disable: "mobile",
+    duration: 600,
+    easing: "ease-in-sine",
+  });
+  /* подключение и настрока плагина анимации */
 });

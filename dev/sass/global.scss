@@ -36,6 +36,22 @@ span {
   padding-left: 15px;
   padding-right: 15px;
 }
+.subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.24px;
+}
+.title {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 0.165px;
+}
+.descript {
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
 .btn-dark {
   background-color: $primary-color;
   color: $title-color;

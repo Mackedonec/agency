@@ -40,7 +40,6 @@
           animation-name: ballsmove;
           animation-duration: 24.5s;
           animation-iteration-count: infinite;
-
           @include lg {
             animation-name: ballsmovelg;
             animation-duration: 24.5s;

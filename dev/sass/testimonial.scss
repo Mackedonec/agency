@@ -1,0 +1,173 @@
+.testimonial {
+  margin: 0 auto 150px;
+  .wrapper-text {
+    text-align: center;
+    margin-bottom: 50px;
+    .testimonial-subtitle {
+      @extend .subtitle;
+      @include lg {
+        font-size: 18px;
+        letter-spacing: 0.18px;
+      }
+      @include md {
+        font-size: 16px;
+        letter-spacing: 0.16px;
+      }
+      @include sm {
+        font-size: 14px;
+        letter-spacing: 0.14px;
+      }
+    }
+    .testimonial-title {
+      @extend .title;
+      margin: 20px auto 0;
+      @include lg {
+        font-size: 48px;
+        letter-spacing: 0.48px;
+      }
+      @include md {
+        font-size: 36px;
+        letter-spacing: 0.36px;
+      }
+      @include sm {
+        font-size: 24px;
+        letter-spacing: 0.28px;
+      }
+    }
+  }
+  .wrapper-card {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    .cards {
+      position: relative;
+      z-index: 1;
+      max-width: 380px;
+      min-height: 335px;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      border-radius: 20px;
+      background: #0b0f15;
+      @include t05s;
+      @include xl {
+        margin: 0 auto;
+        &.card3 {
+          display: none;
+        }
+      }
+      @include lg {
+        &.card2 {
+          display: none;
+        }
+      }
+      .cards-img {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        margin-left: 40px;
+        margin-top: 40px;
+        img {
+          @include t05s;
+        }
+      }
+      .cards-box {
+        width: 110px;
+        margin-left: 30px;
+        margin-top: 55px;
+        text-align: left;
+        .cards-title {
+          font-family: $font-primary;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.7;
+          letter-spacing: 0.2px;
+          margin-top: -10px;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          @include sm {
+            font-size: 18px;
+            letter-spacing: 0.18px;
+          }
+        }
+        .cards-subtitle {
+          font-size: 11px;
+          line-height: 3.9;
+          letter-spacing: 0.11px;
+          opacity: 0.5;
+          margin-top: -10px;
+        }
+      }
+      .cards-descript {
+        text-align: left;
+        width: 309px;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.18px;
+        opacity: 0.8;
+        margin-left: 30px;
+        margin-bottom: 106px;
+        @include sm {
+          width: 280px;
+          font-size: 14px;
+          letter-spacing: 0.14px;
+        }
+      }
+      @include sm {
+        max-width: 340px;
+        height: 260px;
+      }
+      &:hover {
+        @include t05s;
+        box-shadow: 0px 8px 24px 0px #a3a3a30d;
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .balls-group {
+      overflow: visible;
+      position: absolute;
+      top: -165px;
+      left: 100px;
+      transform: rotate(15deg);
+      ellipse {
+        fill: #2563ff;
+        animation-name: fill3;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include sm {
+          animation: none;
+        }
+      }
+      @include lg {
+        top: -50px;
+        left: 0;
+      }
+      @include sm {
+        display: none;
+      }
+    }
+    .balls-group2 {
+      overflow: visible;
+      position: absolute;
+      bottom: -20px;
+      right: 45px;
+      transform: rotate(15deg);
+      ellipse {
+        fill: #2563ff;
+        animation-name: fill3;
+        animation-duration: 24.5s;
+        animation-iteration-count: infinite;
+        @include sm {
+          animation: none;
+        }
+      }
+      @include sm {
+        display: none;
+      }
+    }
+  }
+}
